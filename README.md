@@ -34,7 +34,7 @@ Social and Economic Context Attributes:
 Output variable (desired target):
 21 - y - has the client subscribed a term deposit? (binary: 'yes','no')
 
-# Business Objective:
+# Business Objective
 The business problem in this case is centered around predicting the likelihood of a client subscribing to a term deposit, which is a fixed-time 
 investment product offered by banks. By analyzing the features in the data, the goal is to build a model that can predict whether a client will subscribe to a term deposit or not (a binary classification problem). This is crucial for the business as it enables better targeting of future marketing campaigns, helps in optimizing 
 resource allocation, improves customer conversion rates, and ultimately increases the bank's revenue from term deposit subscriptions.
@@ -48,14 +48,14 @@ Increase Revenue: By improving conversion rates through effective targeting, the
 In summary, the core business problem is to optimize the bank’s marketing strategy by predicting which clients are more likely to subscribe to a term deposit, 
 enabling more efficient and personalized marketing efforts.
 
-# Model Comparison:
+# Model Comparison
 After comparing the "Train time", "Train Accuracy", and "Test Accurancy" for all 4 models, here are the -
 Key takeaways:
 Logistic Regression performs well, with balanced training and test accuracy, making it a reliable and efficient model.
 kNN performs well but slightly overfits. Its fast training time makes it a good choice for smaller datasets, but it might not scale well for larger datasets due to the computation during prediction.
 Decision Tree tends to overfit, and while its training time is reasonable, its test accuracy suggests that it may need parameter tuning or pruning to avoid overfitting.
 SVM is slower to train but offers good generalization. It is useful for smaller datasets with complex boundaries, but its long training time might be a concern for large datasets.
-
+![17_1](https://github.com/user-attachments/assets/3c074700-dec4-417e-bd54-6bfddd96dcf5)
 Overall Comparison:
 Logistic Regression offers the best balance between training time, train accuracy, and test accuracy. It is an efficient and generalizable model.
 kNN is the fastest to train but shows slight overfitting.
@@ -115,4 +115,4 @@ Communicate with Stakeholders: Make sure to explain the results, feature importa
 Model Ensembling: Combine multiple models to create an ensemble that can improve predictive power.
 Neural Networks: If your dataset is large and complex, you can explore neural networks or deep learning models for better accuracy.
 
-![17_1](https://github.com/user-attachments/assets/3c074700-dec4-417e-bd54-6bfddd96dcf5)
+
