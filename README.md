@@ -3,7 +3,7 @@ Overview:
 In this practical application, your goal is to compare the performance of the classifiers we encountered in this section, namely K Nearest Neighbor, Logistic Regression, Decision Trees, and Support Vector Machines. We will utilize a dataset related to marketing bank products over the telephone.
 
 Input variables:
-# bank client data:
+Bank client data:
 1 - age (numeric)
 2 - job : type of job (categorical: 'admin.','blue-collar','entrepreneur','housemaid','management','retired','self-employed','services','student','technician','unemployed','unknown')
 3 - marital : marital status (categorical: 'divorced','married','single','unknown'; note: 'divorced' means divorced or widowed)
@@ -11,17 +11,20 @@ Input variables:
 5 - default: has credit in default? (categorical: 'no','yes','unknown')
 6 - housing: has housing loan? (categorical: 'no','yes','unknown')
 7 - loan: has personal loan? (categorical: 'no','yes','unknown')
-# related with the last contact of the current campaign:
+
+Related with the last contact of the current campaign:
 8 - contact: contact communication type (categorical: 'cellular','telephone')
 9 - month: last contact month of year (categorical: 'jan', 'feb', 'mar', ..., 'nov', 'dec')
 10 - day_of_week: last contact day of the week (categorical: 'mon','tue','wed','thu','fri')
 11 - duration: last contact duration, in seconds (numeric). Important note: this attribute highly affects the output target (e.g., if duration=0 then y='no'). Yet, the duration is not known before a call is performed. Also, after the end of the call y is obviously known. Thus, this input should only be included for benchmark purposes and should be discarded if the intention is to have a realistic predictive model.
-# other attributes:
+
+Other Attributes:
 12 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact)
 13 - pdays: number of days that passed by after the client was last contacted from a previous campaign (numeric; 999 means client was not previously contacted)
 14 - previous: number of contacts performed before this campaign and for this client (numeric)
 15 - poutcome: outcome of the previous marketing campaign (categorical: 'failure','nonexistent','success')
-# social and economic context attributes
+
+Social and Economic Context Attributes:
 16 - emp.var.rate: employment variation rate - quarterly indicator (numeric)
 17 - cons.price.idx: consumer price index - monthly indicator (numeric)
 18 - cons.conf.idx: consumer confidence index - monthly indicator (numeric)
@@ -31,7 +34,7 @@ Input variables:
 Output variable (desired target):
 21 - y - has the client subscribed a term deposit? (binary: 'yes','no')
 
-Business Objective:
+# Business Objective:
 The business problem in this case is centered around predicting the likelihood of a client subscribing to a term deposit, which is a fixed-time 
 investment product offered by banks. By analyzing the features in the data, the goal is to build a model that can predict whether a client will subscribe to a term deposit or not (a binary classification problem). This is crucial for the business as it enables better targeting of future marketing campaigns, helps in optimizing 
 resource allocation, improves customer conversion rates, and ultimately increases the bank's revenue from term deposit subscriptions.
@@ -45,7 +48,7 @@ Increase Revenue: By improving conversion rates through effective targeting, the
 In summary, the core business problem is to optimize the bank’s marketing strategy by predicting which clients are more likely to subscribe to a term deposit, 
 enabling more efficient and personalized marketing efforts.
 
-Model Comparison:
+# Model Comparison:
 After comparing the "Train time", "Train Accuracy", and "Test Accurancy" for all 4 models, here are the -
 Key takeaways:
 Logistic Regression performs well, with balanced training and test accuracy, making it a reliable and efficient model.
@@ -59,7 +62,7 @@ kNN is the fastest to train but shows slight overfitting.
 Decision Tree overfits significantly, which affects its performance on test data, despite being fast to train.
 SVM generalizes well but comes with a high training time, making it less practical for larger datasets.
 
-Next Steps:
+# Next Steps
 1. Further Model Optimization
 Hyperparameter Tuning: Although you have used GridSearchCV, consider extending the hyperparameter search space. For instance, try tuning the solver (saga for larger datasets) or increasing the range of C values.
 Model Evaluation on Additional Metrics: Evaluate models based on multiple metrics like precision, recall, and F1-score (especially for imbalanced classes) in addition to accuracy.
@@ -86,7 +89,7 @@ Now that you've explored deployment, implement the model in your preferred produ
 Monitoring: Set up monitoring and alerts for model performance to detect any data drift or performance degradation over time.
 Continuous Integration: Set up automated pipelines for retraining the model on fresh data (e.g., using CI/CD pipelines).
 
-Recommendations:
+# Recommendations
 1. Focus on Interpretability
 Interpretability vs. Performance: Logistic Regression is often easier to interpret because you can look at feature coefficients. If interpretability is essential for your project (e.g., explaining results to non-technical stakeholders), it might be better to prioritize simpler models.
 Visualize Important Features: Continue visualizing the top features contributing to your model’s predictions. This will provide valuable insights into what drives outcomes.
